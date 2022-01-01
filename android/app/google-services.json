@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "313757343261",
+    "project_id": "money-5a9fd",
+    "storage_bucket": "money-5a9fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313757343261:android:496dff7549dc2cf95e70f4",
+        "android_client_info": {
+          "package_name": "tech.hyperone.trackex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313757343261-3gu91jn9oknneuscnm5oqhosoujnnivv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMVknyLU7hpxreMsht-CpFwuneyR2Z1a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313757343261-3gu91jn9oknneuscnm5oqhosoujnnivv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
