@@ -2,23 +2,20 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:trackex/Front/lib/main.dart';
 import 'package:trackex/pages/Dashboard.dart';
+import 'package:trackex/Third/lib/HomeWidget.dart';
 import 'package:trackex/pages/ForgotPass.dart';
 import 'package:trackex/providers/UserProvider.dart';
 import 'package:trackex/theme/colors.dart';
-
 import 'package:trackex/theme/Style.dart';
-
 import 'package:trackex/widget/inputbox.dart';
-
 import 'package:trackex/widget/Buttons.dart';
-
 import 'package:trackex/widget/snackbar.dart';
 
 class SignIn extends StatefulWidget {
   @override
   _SignInState createState() => _SignInState();
-
 }
 
 class _SignInState extends State<SignIn> {
@@ -48,7 +45,7 @@ class _SignInState extends State<SignIn> {
           .fetchLogedUser()
           .then((value) {
         Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (context) => Dashboard()),
+            MaterialPageRoute(builder: (context) => BottomNav()),
             (route) => false);
       });
     } on FirebaseAuthException catch (e) {

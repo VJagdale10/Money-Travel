@@ -1,11 +1,11 @@
- 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:trackex/pages/Dashboard.dart';
 import 'package:trackex/pages/Onboarding.dart';
 import 'package:trackex/pages/Signin.dart';
+import 'package:trackex/Front/lib/HomePage.dart';
 import 'package:trackex/theme/colors.dart';
- 
+import 'package:trackex/Third/lib/HomeWidget.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -29,19 +29,15 @@ class _SplashScreenState extends State<SplashScreen>
       controller.reverse();
     });
     Future.delayed(Duration(seconds: 2)).then((value) {
-   if(FirebaseAuth.instance.currentUser!=null)
-   {
-
+      if (FirebaseAuth.instance.currentUser != null) {
         Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => Dashboard()),
-          (route) => false);
-
-   }else{
-
+            MaterialPageRoute(builder: (context) => BottomNav()),
+            (route) => false);
+      } else {
         Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => Onboarding()),
-          (route) => false);
-   }
+            MaterialPageRoute(builder: (context) => Onboarding()),
+            (route) => false);
+      }
     });
   }
 
@@ -96,7 +92,4 @@ class _SplashScreenState extends State<SplashScreen>
       },
     );
   }
-
- 
 }
- 

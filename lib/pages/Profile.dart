@@ -11,6 +11,8 @@ import 'package:trackex/pages/Onboarding.dart';
 import 'package:trackex/providers/UserProvider.dart';
 import 'package:trackex/theme/colors.dart';
 import 'package:trackex/theme/Style.dart';
+import 'package:flutter/material.dart';
+import 'package:trackex/Third/lib/HomeWidget.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -109,8 +111,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         ),
                                         Positioned(
                                           top: 12.5,
-                                          left:12.5,
-                                          
+                                          left: 12.5,
                                           child: Center(
                                             child: Container(
                                               width: 85,
@@ -124,7 +125,8 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 //
                                               ),
                                               child: ClipRRect(
-                                                borderRadius: BorderRadius.circular(42.5),
+                                                borderRadius:
+                                                    BorderRadius.circular(42.5),
                                                 child: CachedNetworkImage(
                                                   imageUrl: user.profilePicture,
                                                   fit: BoxFit.fitWidth,
@@ -441,5 +443,14 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
               ));
     });
+  }
+}
+
+class Profile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return HomeWidget(
+      parentCtx: context,
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'dart:io';
-
+import 'package:trackex/Front/lib/main.dart';
+import 'package:trackex/Third/lib/HomeWidget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -78,7 +79,7 @@ class _SignupState extends State<Signup> {
 
       Navigator.pushAndRemoveUntil(
           context,
-          MaterialPageRoute(builder: (contex) => Dashboard()),
+          MaterialPageRoute(builder: (contex) => BottomNav()),
           (route) => false);
     });
   }
